@@ -161,6 +161,19 @@ section{
     font-size: 2.4rem;
     font-weight: 600;
     margin-bottom: 1em;
+    position: relative;
+}
+
+.section__title::after{
+    content: "";
+    width: 6em;
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    background-color: #2f9e44;
+    height: .1em;
+    transform: translateX(-50%);
+
 }
 
 .about-us__content{
@@ -387,19 +400,46 @@ form{
     max-height: 3em;
     font-size: 1.6rem;
     position: relative;
-    transition: all 1s;
+    transition: all .5s;
     background: none;
     border: 2px solid #2f9e44;
     color: #2f9e44;
     font-weight: var(--fw-bold);
-
+    overflow: hidden;
+    margin-top: 2em;
+    cursor: pointer;
 }
+
+.btn-submit::before{
+    content: "5 places left!";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2ba837;
+    color: white;
+    transform: translateY(-100%);
+    transition: all .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-submit:hover::before{
+    transform: translateY(0%);
+}
+
 
 input, textarea{
     width: 100%;
     padding: .5em;
     font: inherit;
     font-size: 1.6rem;
+}
+
+textarea{
+    resize: none;
 }
 
 label{
@@ -504,10 +544,39 @@ input[type="submit"]{
 
 /* footer */
 footer{
-    height: 30vh;
+    padding: 2em;
     background-color: #2f9e44;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: white;
 }
 
+.logo{
+    font-weight: var(--fw-bold);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+address, .email-info{
+    font-size: 1.4rem;
+}
+
+.footer__list{
+    display: flex;
+    list-style: none;
+    font-size: 1.4rem;
+    color: #fff;
+    gap: 2em;
+    margin-right: 2em;
+}
+
+.footer__item{
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    transition: all .3s;
+}
 
 
 
