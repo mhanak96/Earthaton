@@ -23,7 +23,7 @@
                     <li class="primary-nav__item"><a href="#challanges">Challanges</a></li>
                     <li class="primary-nav__item"><a href="#agenda">Agenda</a></li>
                 </ul>
-                <button class="btn-sign">Sign up</button>
+                <a href="#sign-up" class="btn-sign">Sign up</a>
             </nav>
             <video class="bg-video" autoplay muted loop>
                 <source src="img/earth.mp4" type="video/mp4">
@@ -33,8 +33,15 @@
                 <span class="header__date">05.01.2023 - 06.01.2023</span>
                 <p class="header__info">Eco-Hackaton in Warsaw</p>
                 <!-- tu obliczanko -->
-                <button class="btn-sign">Sign up</button>
+                <a href="#sign-up" class="btn-sign">Sign up</a>
+                <div class="partners-logos">
+                    <img class="partner-logo" src="img/logos/techcrunch.png" alt="Techcrunch logo">
+                    <img class="partner-logo" src="img/logos/the-new-york-times.png" alt="Techcrunch logo">
+                    <img class="partner-logo" src="img/logos/forbes.png" alt="Techcrunch logo">
+                    <img class="partner-logo" src="img/logos/usa-today.png" alt="Techcrunch logo">
+                </div>
             </div>
+           
         </header>
         <main class="container">
             <section id="about-us">
@@ -46,15 +53,6 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit, sint aut assumenda blanditiis aliquam harum. Et dolores dolorum distinctio consequuntur maiores quia modi, ex nihil quibusdam! Reiciendis, totam autem.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vel repellat quibusdam perferendis provident at aliquid repudiandae vitae, officia eaque. Commodi perferendis laudantium cupiditate necessitatibus unde asperiores architecto saepe ratione.
                         Aliquid ipsum aliquam eveniet ducimus incidunt doloremque repudiandae officia totam explicabo esse neque dolores, illo obcaecati sit nobis ratione sed laboriosam iusto omnis veniam mollitia, corrupti pariatur dolorum! Optio, facere.</p>
-                        <div class="about-us__partners">
-                            <h3 class="partners-heading">Our partners</h3>
-                            <div class="partners-logos">
-                                <img class="partner-logo" src="img/logos/techcrunch.png" alt="Techcrunch logo">
-                                <img class="partner-logo" src="img/logos/the-new-york-times.png" alt="Techcrunch logo">
-                                <img class="partner-logo" src="img/logos/forbes.png" alt="Techcrunch logo">
-                                <img class="partner-logo" src="img/logos/usa-today.png" alt="Techcrunch logo">
-                            </div>
-                        </div>
                     </div>
                 </figure>
               
@@ -129,22 +127,34 @@
 
             <section id="sign-up">
                 <h2 class="section__title">Sign up</h2>
-
-                <form>
-                    <div class="form-block">
-                        <label for="name">Your Name:</label>
-                        <input id="name" type="text">
+                <div class="sign-up__content">
+                    <form>
+                        <div class="form-block form-block--name">
+                            <label for="name">Your Name:</label>
+                            <input id="name" type="text">
+                        </div>
+                        <div class="form-block form-block--email">
+                            <label for="email">Your email:</label>
+                            <input id="email" type="email">
+                        </div>
+                        <div class="form-block form-block--members">
+                            <label for="tmem">Type out all the team members:</label>
+                            <textarea id="tmem"></textarea>
+                        </div>
+                      <input type="submit" class="btn-submit" name="Submit">
+                    </form>
+    
+                    <div class="sign-up__steps">
+                        <h3 class="steps__title"><span>so...what is the plan?</span></h3>
+                        <ul class="steps__list">
+                            <li class="step-1">Register to the event</li>
+                            <li class="step-2">Wait for our response email</li>
+                            <li class="step-3">Arrive to our event with your teammates</li>
+                            <li class="step-4">Be present during hackaton results</li>
+                        </ul>
                     </div>
-                    <div class="form-block">
-                        <label for="team">Name of your team:</label>
-                        <input id="team" type="text">
-                    </div>
-                    <div class="form-block">
-                        <label for="tmem">Type out all the team members:</label>
-                        <input id="tmem" type="text">
-                    </div>
-                  <input type="submit" class="btn-submit" name="Submit">
-                </form>
+                </div>
+                
             </section>
         </main>
         <footer>

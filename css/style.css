@@ -88,6 +88,30 @@ section{
     background:none;
     border: 2px solid var(--color-accent);
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    z-index: 1;
+    max-width: 8em;
+    text-align: center;
+}
+
+.btn-sign::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2ba837;
+    transform: translateX(-100%);
+    transition: all 1s;
+    z-index: -1;
+
+}
+
+.btn-sign:hover::before{
+    transform: translateX(0);
 }
 
 .bg-video{
@@ -104,9 +128,15 @@ section{
 /* header */
 .header__content{
     position: relative;
-    top: 50%;   
-    right: -8%;
+    top: 70%;   
+    left: 38%;
+    margin-top: auto;
     transform: translate(50%, -50%);
+    overflow-x: hidden;
+    display: grid;
+    grid-template: repeat(4, auto) 1fr/ 1fr;
+    max-width: 40%;
+    height: 60%;
 }
 
 .header__title{
@@ -122,7 +152,7 @@ section{
 
 .header__info{
     font-size: 1.5rem;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 /* section - about us */
@@ -165,24 +195,17 @@ section{
     text-transform: uppercase;
 }
 
-.about-us__partners{
-    width: 100%;
-    margin-inline: auto;
-    color: #888;
-}
-
 .partners-logos{
     display: flex;
-    justify-content: space-between;
-    gap: 3em;
-    padding: 1em;
+    gap: 1em;
+    max-width: 50%;
+    align-self: flex-end;
+    margin-bottom: 3em;
 }
 
 .partner-logo{
-    height: 3em;
-    filter: brightness(0);
-    opacity: 50%;
-
+    height: 2.2em;
+    filter: brightness(0) invert(1);
 }
 
 /* challanges */
@@ -216,13 +239,9 @@ section{
 }
 /* agenda */
 
-
-
-#agenda .section__title {
-    display: block;
-    background-color: var(--color-accent);
-    color: var(--color-white);
-    border-radius: 10px;
+#agenda{
+    max-height: 80vh;
+    margin-bottom: 6em;
 }
 
 .agenda-content{
@@ -329,13 +348,168 @@ section{
 }
 
 
-/* form area */
+#sign-up{
+    margin-bottom: 1em;
+}
+
+.sign-up__content{
+    display: flex;
+    gap: 15em;
+}
+
+/* /* form area */
+form{
+    max-width: 50%;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template-areas: 
+    "name email"
+    "members members"
+    "submit submit";
+    column-gap: 3em;
+}
+
+.form-block--name{
+    grid-area: name;
+}
+
+.form-block--email{
+    grid-area: email;
+} 
+
+.form-block--members{
+    grid-area: members;
+} 
+
+.btn-submit{
+    grid-area: submit;
+    max-width: 10em;
+    max-height: 3em;
+    font-size: 1.6rem;
+    position: relative;
+    transition: all 1s;
+    background: none;
+    border: 2px solid #2f9e44;
+    color: #2f9e44;
+    font-weight: var(--fw-bold);
+
+}
+
+input, textarea{
+    width: 100%;
+    padding: .5em;
+    font: inherit;
+    font-size: 1.6rem;
+}
+
+label{
+    display: block;
+    font-size: 1.6rem;
+}
+
+input, textarea{
+    margin-top: .5em;
+}
+
+input[type="submit"]{
+    margin-top: 1em;
+}
+
+.steps__title{
+    font-size: 1.8rem;
+    font-weight: var(--fw-bold);
+    padding-bottom: .5em;
+}
+
+.steps__list{
+    display: block;
+    border-left: 2px solid #2f9e44;
+    list-style: none;
+    margin-left: 1em;
+}
+
+.steps__list li {
+    font-size: 1.6rem;
+    padding: .7em;
+    position: relative;
+}
+
+.step-1::before{
+    content: "1";
+    display: inline-flex;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 1;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #2f9e44;
+    border-radius: 50%;
+    position: absolute;
+    left: -2.5%;
+    top: 34%;
+}
+
+.step-2::before{
+    content: "2";
+    display: inline-flex;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 1;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #2f9e44;
+    border-radius: 50%;
+    position: absolute;
+    left: -2.5%;
+    top: 34%;
+}
+
+.step-3::before{
+    content: "3";
+    display: inline-flex;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 1;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #2f9e44;
+    border-radius: 50%;
+    position: absolute;
+    left: -2.5%;
+    top: 34%;
+}
+
+.step-4::before{
+    content: "4";
+    display: inline-flex;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 1;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #2f9e44;
+    border-radius: 50%;
+    position: absolute;
+    left: -2.5%;
+    top: 34%;
+}
 
 /* footer */
 footer{
     height: 30vh;
-    background-color: var(--color-accent);
+    background-color: #2f9e44;
 }
+
+
+
 
 
 
