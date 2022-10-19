@@ -24,6 +24,10 @@
     
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* general styling */
 body{
     font-family: var(--ff-primary);
@@ -40,7 +44,7 @@ header {
 }
 
 section{
-    /* height: 100vh; */
+    /* height: 80vh; */
     margin-bottom: 4em;
 }
 
@@ -56,6 +60,20 @@ section{
 /* ///////////// */
 /* main styling part */
 /* ///////////// */
+
+.sticky{
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    height: 14em;
+    z-index: 30;
+    background-color: rgba(0,0,0,.97);
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 
 /* navigation */
 .primary-nav{
@@ -78,6 +96,28 @@ section{
     text-decoration: none;
     color: inherit;
     font-size: 1.8rem;
+    position: relative;
+}
+
+.primary-nav__item a::after,
+.footer-item::after{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    right: 50%;
+    width: 0;
+    height: 0;
+    background-color: #fff;
+    transition: all .8s;
+}
+
+.primary-nav__item a:hover::after,
+.footer-item:hover::after{
+    border-bottom: 1px solid var(--color-white);
+    width: 100%;
+    left: 0;
+    right: 0;
 }
 
 .btn-sign{
@@ -211,7 +251,7 @@ section{
 .partners-logos{
     display: flex;
     gap: 1em;
-    max-width: 50%;
+    max-width: 90%;
     align-self: flex-end;
     margin-bottom: 3em;
 }
@@ -237,6 +277,12 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all .4s;
+}
+
+.challanges-card:hover{
+    transform: translateY(-1em);
+    cursor: pointer;
 }
 
 .challanges-card__icon {
@@ -545,7 +591,7 @@ input[type="submit"]{
 /* footer */
 footer{
     padding: 2em;
-    background-color: #2f9e44;
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
