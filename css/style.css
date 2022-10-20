@@ -625,7 +625,171 @@ address, .email-info{
 }
 
 
+@media (max-width:81.25em) {
+    
+    .about-us__content{
+        display: block;
+        position: relative;
+        height: 78vh;
+        background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .about-us__image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center top;
+        max-width: unset;
+        width: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
 
+    .about-us__text{
+        /* text-align: center; */
+        padding: 3em;
+        bottom: -7%;
+        position: absolute;
+        overflow: hidden;
+        color: white;
+    }
+
+    
+
+    .agenda-gallery{
+        display: none;
+    }
+
+    .agenda-content-left{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .sign-up__content{
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+        align-items: center;
+    }
+
+    form{
+        max-width: unset;
+        width: 100%;
+    }
+
+
+    footer{
+        background-color: red;
+    }
+}
+
+@media (max-width:70em) {
+    #agenda{
+        max-height: unset;
+    }
+    
+    .agenda-content-left{
+        display: flex;
+        justify-content: unset;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first-day, .second-day{
+       width: 70%;
+       margin-inline: auto;
+       border: 2px solid #2f9e44;
+       display: flex;
+       flex-direction: column;
+       padding: 2em;
+       margin-bottom: 2em;
+       
+    }
+
+    .steps__list{
+        width: 100%;
+        margin-left: unset;
+    }
+
+    .challanges-grid{
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+
+    
+}
+
+
+
+@media (max-width: 50em) {
+    .first-day, .second-day{
+        width: 100%;
+    }
+
+    .steps__list{
+        width: 100%;
+        margin-left: unset;
+    }
+
+    
+    .step-1::before{
+        left: -3.5%;
+    }
+
+    .step-2::before{
+        left: -3.5%;
+    }
+
+    .step-3::before{
+        left: -3.5%;
+    }
+
+    .step-4::before{
+        left: -3.5%;
+    }
+
+    .challanges-grid{
+        grid-template: repeat(6, 1fr) / 1fr;
+        
+
+    }
+
+    .challanges-card{
+        max-width: 385px;
+        margin-inline: auto;
+    }
+     
+    form{
+        grid-template: repeat(4, 1fr) / 1fr;
+        grid-template-areas: 
+        "name"
+        "email"
+        "members"
+        "submit";
+        column-gap: 0;
+    }
+
+    .btn-submit{
+        margin-top: 2em;
+        margin-inline: auto;
+        width: 8em;
+        height: 4em;
+        margin-bottom: 2em;
+    }
+
+    input, textarea{
+        margin-top: 0;
+    }
+
+    .form-block{
+        max-height: 13em;
+    }
+}
 
 
                      
