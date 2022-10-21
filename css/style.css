@@ -682,11 +682,6 @@ address, .email-info{
         max-width: unset;
         width: 100%;
     }
-
-
-    footer{
-        background-color: red;
-    }
 }
 
 @media (max-width:70em) {
@@ -727,6 +722,65 @@ address, .email-info{
 
 
 @media (max-width: 50em) {
+    
+    .bg-video{
+        display: none;
+    }
+
+    .primary-nav{
+        display: none;
+    }
+
+    header{
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__content{
+        position: relative;
+        top: unset;   
+        left: unset;
+        margin-top: unset;
+        transform: unset;
+        overflow-x: hidden;
+        display: block;
+        max-width: unset;
+        height: unset;
+        text-align: center;
+       
+    }
+
+    .header__title{
+        font-size: 3.5rem;
+    }
+
+    .header__info{
+        margin-bottom: 2em;
+    }
+
+    .btn-sign{
+
+    }
+
+    .btn-sign::before{
+     display: none;
+    }
+
+    .header__date{
+        font-size: 1.5rem;
+    }
+
+    .partners-logos{
+        flex-direction: column;
+    }
+    .partner-logo{
+        
+        margin-top: 4em;
+        height: 4em;
+    }
+    
     .first-day, .second-day{
         width: 100%;
     }
@@ -756,12 +810,25 @@ address, .email-info{
     .challanges-grid{
         grid-template: repeat(6, 1fr) / 1fr;
         
-
     }
 
     .challanges-card{
         max-width: 385px;
         margin-inline: auto;
+    }
+
+    .about-us__image{
+      display: none;
+    }
+
+    .about-us__content{
+        height: unset;
+        background: linear-gradient(0deg, #286533 100%, #2b812b44 100%);
+    }
+
+    .about-us__text{
+        position: unset;
+       
     }
      
     form{
@@ -789,6 +856,69 @@ address, .email-info{
     .form-block{
         max-height: 13em;
     }
+
+    .steps__list {
+        border-left: none;
+        text-align: center;
+    }
+
+    .steps__list > *{
+        margin-top: .5em;
+    }
+
+    .step-1::before,
+    .step-2::before,
+    .step-3::before,
+    .step-4::before{
+        left: 46%;
+        top: -15%;
+        width: 32px;
+        height: 32px;
+    }
+      
+
+    .first-day__list li:first-of-type {
+        border-left: none;
+    }
+
+    .first-day__list li:first-of-type,
+    .second-day__list li:first-of-type {
+        border-left: none;
+    }
+
+    .first-day__list li:not(:first-of-type),
+    .second-day__list li:not(:first-of-type){
+        display: block;
+        border-left: none;
+    
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .col-1 address, .email-info {
+        font-size: .8rem;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .col-2{
+        margin-inline: auto;
+    }
+
+    .footer-nav{
+        margin-inline: auto;
+    }
+
+    .footer__list{
+        margin-top: 1em;
+        flex-direction: column;
+        gap: .5em;
+        margin-inline: auto;
+        align-items: center;
+    }
+  
 }
 
 
