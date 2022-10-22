@@ -74,6 +74,19 @@ section{
     padding-bottom: 0;
 }
 
+.mobile-nav-toogle .sticky-mobile{
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    height: 4em !important;
+    z-index: 30;
+    background-color: rgba(0,0,0,.97);
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 
 /* navigation */
 .primary-nav{
@@ -624,6 +637,10 @@ address, .email-info{
     transition: all .3s;
 }
 
+.mobile-nav-toogle{
+    display: none;
+}
+
 
 @media (max-width:81.25em) {
     
@@ -731,29 +748,72 @@ address, .email-info{
         display: none;
     }
 
+    .primary-nav[data-visible="true"]{
+        display: block;
+        height: 100vh;
+        background-color: #000;
+        width: 100vw;
+        z-index: 10;
+    }
+
+    .primary-nav__list{
+        flex-direction: column;
+        margin-right: 0;
+        margin-top: 3em;
+    }
+
+    .primary-nav .btn-sign{
+      position: unset;
+      display: block;
+      margin-inline:auto;
+      margin-top: 3em;
+    }
+
+    .mobile-nav-toogle{
+        display: block;
+        position: absolute;
+        z-index: 200;
+        right: 1em;
+        top: 1em;
+        background: transparent;
+        background-image: url(..//img/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 0;
+        width: 1.5rem;
+        aspect-ratio: 1;
+    }
+
+    .mobile-nav-toogle[aria-expanded="true"]{
+        background-image: url(../img/icon-close.svg);
+    }
+
     header{
         background-color: #000;
         display: flex;
         align-items: center;
         justify-content: center;
+        height: unset;
+        overflow: unset;
     }
 
     .header__content{
         position: relative;
         top: unset;   
         left: unset;
-        margin-top: unset;
+        margin-top: 4em;
         transform: unset;
         overflow-x: hidden;
         display: block;
         max-width: unset;
         height: unset;
         text-align: center;
+        overflow: unset;
        
     }
 
     .header__title{
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
     .header__info{
@@ -773,12 +833,16 @@ address, .email-info{
     }
 
     .partners-logos{
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        margin-inline: auto;
+        margin-top: 3em;
     }
     .partner-logo{
-        
         margin-top: 4em;
-        height: 4em;
+        height: 2.2em;
+        width: 12em;
     }
     
     .first-day, .second-day{
@@ -895,6 +959,14 @@ address, .email-info{
 
     footer{
         flex-direction: column;
+    }
+
+    .agenda-content-left{
+        padding-left: 0;
+    }
+
+    .logo{
+        text-align: center;
     }
 
     .col-1 address, .email-info {
