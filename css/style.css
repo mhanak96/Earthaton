@@ -701,6 +701,13 @@ address, .email-info{
     }
 }
 
+@media (max-width: 75em) {
+    .footer__list{
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }  
+}
+
 @media (max-width:70em) {
     #agenda{
         max-height: unset;
@@ -733,13 +740,18 @@ address, .email-info{
         grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     }
 
-    
 }
-
-
 
 @media (max-width: 50em) {
     
+    .container{
+        padding: 2.5rem;
+    }
+    body{
+        position: relative;
+    }
+
+
     .bg-video{
         display: none;
     }
@@ -771,18 +783,19 @@ address, .email-info{
 
     .mobile-nav-toogle{
         display: block;
-        position: absolute;
-        z-index: 200;
+        position: fixed;
+        z-index: 1000;
         right: 1em;
         top: 1em;
         background: transparent;
         background-image: url(..//img/icon-hamburger.svg);
         background-repeat: no-repeat;
         background-position: center;
-        border: 0;
+        border: none;
         width: 1.5rem;
         aspect-ratio: 1;
     }
+    
 
     .mobile-nav-toogle[aria-expanded="true"]{
         background-image: url(../img/icon-close.svg);
@@ -795,6 +808,7 @@ address, .email-info{
         justify-content: center;
         height: unset;
         overflow: unset;
+        position: unset;
     }
 
     .header__content{
@@ -958,6 +972,7 @@ address, .email-info{
     }
 
     footer{
+        display: flex;
         flex-direction: column;
     }
 
@@ -984,11 +999,16 @@ address, .email-info{
     }
 
     .footer__list{
+        display: flex;
         margin-top: 1em;
         flex-direction: column;
         gap: .5em;
         margin-inline: auto;
         align-items: center;
+    }
+
+    footer{
+        align-items: unset;
     }
   
 }
