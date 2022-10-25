@@ -26,6 +26,7 @@
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 150px;
 }
 
 /* general styling */
@@ -744,12 +745,16 @@ address, .email-info{
 
 @media (max-width: 50em) {
     
+    html{
+        scroll-padding-top: 80px;
+    }
     .container{
         padding: 2.5rem;
     }
     body{
         position: relative;
     }
+
 
 
     .bg-video{
